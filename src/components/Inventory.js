@@ -6,7 +6,10 @@ class Inventory extends Component {
         return (
             <div className="inventory">
                 <h2>Inventory!</h2>
-                <AddFirshForm addFish={this.props.addFish} ></AddFirshForm>
+                <AddFirshForm
+                    addFish={this.props.addFish}>
+                </AddFirshForm>
+                <button onClick={this.props.loadSampleFishes}>Load Sample Fishes</button>
             </div>
         )
     }
