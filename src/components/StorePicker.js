@@ -1,5 +1,4 @@
 import React, { Fragment, Component } from 'react';
-import { render } from 'react-dom';
 import { getFunName } from '../helpers';
 
 class StorePicker extends Component {
@@ -18,7 +17,6 @@ class StorePicker extends Component {
         // 2. get the text from that input
         const storeName = this.myInput.current.value;
         // 3. change the page to /store/whatever-they-entered
-        console.log("Going to store...");
         this.props.history.push(`/store/${storeName}`);
     }
 
