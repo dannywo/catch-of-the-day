@@ -16,9 +16,7 @@ class StorePicker extends Component {
         // 1. stop the form from submitting
         event.preventDefault();
         // 2. get the text from that input
-        //console.log(this.myInput.value.value);
-        // console.log(this);
-        const storeName = this.myInput.current.defaultValue;
+        const storeName = this.myInput.current.value;
         // 3. change the page to /store/whatever-they-entered
         console.log("Going to store...");
         this.props.history.push(`/store/${storeName}`);
