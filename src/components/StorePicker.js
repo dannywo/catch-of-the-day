@@ -17,7 +17,7 @@ class StorePicker extends Component {
         event.preventDefault();
         // 2. get the text from that input
         //console.log(this.myInput.value.value);
-        console.log(this);
+        // console.log(this);
         const storeName = this.myInput.current.defaultValue;
         // 3. change the page to /store/whatever-they-entered
         console.log("Going to store...");
