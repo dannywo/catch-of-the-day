@@ -27,6 +27,17 @@ class App extends Component {
         this.setState({ fishes: SampleFishes })
     }
 
+    addToOrder = key => {
+        // 1. take a copy of state
+        const order = { ...this.state.order };
+        // 2. Either add to the order, or update the number in the array
+        order[key] = order[key] + 1 || 1;
+        // 3. call setState to update our state object
+        this.setState({
+            order: order
+        })
+    }
+
     render() {
         return (
             <div className="catch-of-the-day">
@@ -37,7 +48,10 @@ class App extends Component {
                             Object.keys(this.state.fishes).map(key =>
                                 <Fish
                                     key={key}
+                                    // need to be passed again as my own prop
+                                    index={key}
                                     details={this.state.fishes[key]}
+                                    addToOrder={this.addToOrder}
                                 />
                             )
                         }
