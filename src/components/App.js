@@ -63,6 +63,15 @@ class App extends Component {
     })
   }
 
+  deleteFish = (key) => {
+    // 1. take copy of current state    
+    const fishes = {...this.state.fishes};
+    // 2. remove item from state
+    fishes[key] = null;
+    // 3. update state
+    this.setState({ fishes });
+  }
+
   loadSampleFishes = () => {
     this.setState({ fishes: SampleFishes });
   };
@@ -99,6 +108,7 @@ class App extends Component {
         <Inventory
           addFish={this.addFish}
           updateFish={this.updateFish}
+          deleteFish={this.deleteFish}
           loadSampleFishes={this.loadSampleFishes}
           fishes={this.state.fishes}
         />
