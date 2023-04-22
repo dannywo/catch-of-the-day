@@ -54,23 +54,23 @@ class App extends Component {
 
   updateFish = (key, updatedFish) => {
     // 1. Take a copy of the current state
-    const fishes = {...this.state.fishes};
+    const fishes = { ...this.state.fishes };
     // 2. Update that state
     fishes[key] = updatedFish;
     // 3. set that to state
     this.setState({
-      fishes: fishes
-    })
-  }
+      fishes: fishes,
+    });
+  };
 
   deleteFish = (key) => {
-    // 1. take copy of current state    
-    const fishes = {...this.state.fishes};
+    // 1. take copy of current state
+    const fishes = { ...this.state.fishes };
     // 2. remove item from state
     fishes[key] = null;
     // 3. update state
     this.setState({ fishes });
-  }
+  };
 
   loadSampleFishes = () => {
     this.setState({ fishes: SampleFishes });

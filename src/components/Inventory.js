@@ -8,10 +8,10 @@ class Inventory extends Component {
       <div className="inventory">
         <h2>Inventory!</h2>
         {Object.keys(this.props.fishes).map((key) => (
-          <EditFishForm 
+          <EditFishForm
             key={key}
             index={key}
-            fish={this.props.fishes[key]} 
+            fish={this.props.fishes[key]}
             updateFish={this.props.updateFish}
             deleteFish={this.props.deleteFish}
           />
